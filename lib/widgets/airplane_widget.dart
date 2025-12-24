@@ -16,12 +16,16 @@ class AirplaneWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       left: GameConstants.airplaneOffsetX * MediaQuery.of(context).size.width,
-      top: airplaneY * MediaQuery.of(context).size.height -
+      top:
+          airplaneY * MediaQuery.of(context).size.height -
           GameConstants.airplaneOffsetY,
       child: Transform.rotate(
-        angle: (airplaneVelocity * GameConstants.airplaneRotationMultiplier)
-            .clamp(-GameConstants.maxRotationAngle,
-                GameConstants.maxRotationAngle),
+        angle:
+            (airplaneVelocity * GameConstants.airplaneRotationMultiplier).clamp(
+              -GameConstants.maxRotationAngle,
+              GameConstants.maxRotationAngle,
+            ) +
+            GameConstants.airplaneBaseRotation,
         child: const Icon(
           Icons.flight,
           size: GameConstants.airplaneSize,
@@ -31,4 +35,3 @@ class AirplaneWidget extends StatelessWidget {
     );
   }
 }
-

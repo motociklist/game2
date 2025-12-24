@@ -8,6 +8,8 @@ class GameConstants {
   static const double maxAirplaneY = 0.9;
   static const double airplaneRotationMultiplier = 2.0;
   static const double maxRotationAngle = 0.5;
+  static const double airplaneBaseRotation =
+      1.5708; // 90 градусов (π/2) - самолет направлен вниз
 
   // Препятствия
   static const double obstacleSpeed = 0.005;
@@ -36,4 +38,3 @@ class GameConstants {
   static const int obstacleColorBorder = 0xFF1B5E20; // Colors.green.shade900
   static const double obstacleBorderWidth = 3.0;
 }
-
